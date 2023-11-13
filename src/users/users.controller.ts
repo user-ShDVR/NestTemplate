@@ -14,8 +14,8 @@ export class UsersController {
     ) {}
 
   // @Post()
-  // create(@Body() createUserDto: CreateUserDto) {
-  //   return this.usersService.create(createUserDto);
+  // create(@Body() data: CreateUserDto) {
+  //   return this.usersService.create(data.email, data.hash, data.salt);
   // }
 
   @Get()
@@ -25,7 +25,7 @@ export class UsersController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.usersService.findOne(+id);
+    return this.usersService.findOneById(+id);
   }
 
   @Patch(':id')

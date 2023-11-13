@@ -10,7 +10,7 @@ async function start() {
 
 
   const config = new DocumentBuilder()
-    .setTitle('Brandpack.me API')
+    .setTitle('Hackathon API')
     .setDescription('No description')
     .setVersion('dev')
     .build();

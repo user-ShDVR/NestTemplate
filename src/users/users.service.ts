@@ -17,11 +17,11 @@ export class UsersService {
   }
 
   findAll() {
-    return `This action returns all users`;
+    return this.db.user.findMany();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  findOneById(id: number) {
+    return this.db.user.findFirst({where: {id}});
   }
 
   findOneByEmail(email: string) {
@@ -33,6 +33,6 @@ export class UsersService {
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+    return this.db.user.delete({where: {id}});
   }
 }
