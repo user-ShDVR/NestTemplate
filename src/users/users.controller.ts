@@ -13,10 +13,10 @@ export class UsersController {
     private readonly dbService: DbService,
     ) {}
 
-  // @Post()
-  // create(@Body() data: CreateUserDto) {
-  //   return this.usersService.create(data.email, data.hash, data.salt);
-  // }
+  @Post()
+  create(@Body() data: CreateUserDto) {
+    return this.usersService.createUser(data.email, data.password);
+  }
 
   @Get()
   findAll() {
